@@ -1,58 +1,56 @@
 # GymX
 
-GymX is a self-hosted workout tracking web application with an integrated music player. The project is currently in development as part of Hack Club's CloudFALL program.
+GymX is an independent, open-source mobile fitness and nutrition platform. Built upon the robust foundation of OpenGym, GymX is engineered to be the ultimate, all-in-one health companion. It eliminates the need for multiple apps by deeply integrating workout tracking, an embedded music player, and AI-powered nutrition and lifestyle management into a single offline-first interface.
 
-## Project Status
+## The Vision
 
-🚧 GymX is currently in early development.
+Most individuals constantly switch between a fitness tracker for lifting, a nutrition app for food logging, and a media app for music. GymX unifies this entire ecosystem. Your workout data, your diet and macro tracking, your lifestyle metrics, and your audio are entirely controlled within one cohesive application.
 
-The features and architecture described below are planned and may change as development progresses.
+## Comprehensive Feature Set
 
-## Overview
+### 1. Advanced Workout & Progression Tracking
+* **Comprehensive Exercise Logging:** Track distinct exercises, sets, reps, and precise weight increments.
+* **Routine Management:** Build and save custom daily routines for quick access.
+* **Performance Analytics:** Automatically monitor Personal Records (PRs), total volume lifted, and historical workout data.
 
-GymX aims to combine fitness tracking with personal audio management. Users will be able to log their workouts, track their progress, and connect playlists to their workout routines while keeping their data hosted on their own hardware.
+### 2. AI-Powered Nutrition & Diet Logging
+* **Smart Food Scanner:** Use the device camera to scan meals or barcodes, utilizing integrated AI to automatically calculate calories and macronutrients (proteins, carbs, fats).
+* **Predictive Weight Modeling:** Input daily food habits to generate data-driven forecasts showing projected weight gain or loss over time based on caloric surplus or deficit.
+* **Manual Food Logging:** A comprehensive, searchable database for manual entry of meals, snacks, and custom recipes.
 
-## Development Roadmap
+### 3. Lifestyle & Recovery Tracking
+* **Hydration Monitoring:** A built-in daily water tracker with customizable intake goals and easy-log shortcuts.
+* **Sleep Analytics:** Log sleep duration and quality to correlate recovery metrics with gym performance and weight trends.
 
-### Phase 1: Database Foundation
-- Establish a SQLite database
-- Create core workout data structures
-- Implement basic data storage and retrieval
+### 4. Integrated Audio Engine
+* **In-App Media Player:** A functional music player embedded within the workout screen, featuring media controls without needing to minimize the app.
+* **Smart Routine Automation:** Bind specific local or licensed playlists to specific workout routines (e.g., triggering a high-energy playlist automatically on deadlift days).
 
-### Phase 2: Web Interface
-- Build the initial dashboard using HTML and CSS
-- Develop the backend using Flask or FastAPI
-- Connect the backend to the SQLite database
+### 5. Privacy & Local-First Architecture
+* **Total Data Ownership:** GymX operates fully offline. There are no mandatory cloud servers.
+* **Local Storage:** All workout history, AI nutrition logs, and media file paths are stored exclusively on the user's local device.
 
-### Phase 3: Core Tracking Features
-- Log workouts, sets, reps, and weight
-- Track exercise history
-- Track personal records (PRs)
-- Implement basic progress charts
+## Current Development Phase
 
-### Phase 4: Music Integration
-- Build a web-based media player for local or appropriately licensed music
-- Implement playlist creation and management
-- Link playlists to workout routines
+**Current Focus: Environment Setup, Codebase Mapping, and Architecture Restructuring**
 
-### Phase 5: Deployment & Self-Hosting
-- Containerize the application using Docker
-- Configure database persistence and environment variables
-- Deploy GymX to a Linux environment
+We are currently reverse-engineering the OpenGym repository and preparing the foundation for the GymX feature set. Active development tasks include:
+* Systematically mapping the OpenGym codebase to understand existing UI component hierarchies and state management flows.
+* Stripping out legacy external server logic to prepare the application for a strictly local-first storage model.
+* Researching lightweight, on-device AI models for local food scanning and macro calculation without relying on external cloud APIs.
+* Designing the schema for the new local database to support the expanded nutrition, sleep, and hydration metrics.
 
-### Phase 6: Polish & Release
-- Implement user authentication
-- Optimize the interface for mobile devices
-- Establish database backups
-- Write comprehensive documentation
+## Acknowledgments & Credits
 
-## Planned Tech Stack
+This project was heavily inspired by and built upon the open-source foundation of [OpenGym](https://github.com/arvids-unavailable/openGym). We are incredibly grateful to the original developers for providing a robust starting point that allowed us to build out our custom fitness, nutrition, and audio integration features.
 
-- **Backend:** Python, Flask or FastAPI
-- **Database:** SQLite
-- **Frontend:** HTML, CSS, JavaScript
-- **Deployment:** Docker, Linux
+## Tech Stack
+
+* **Platform:** Mobile (Framework inherited from OpenGym codebase)
+* **Storage:** Local Device Storage 
+* **AI Engine:** On-device machine learning for food recognition (Implementation pending)
+* **Workflow:** Git / GitHub
 
 ## License
 
-To be determined.
+This project is strictly licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). See the `LICENSE` file for full details and distribution requirements.
