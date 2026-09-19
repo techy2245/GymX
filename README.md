@@ -1,10 +1,10 @@
 # GymX
 
-GymX is an independent, open-source mobile fitness and nutrition platform. Built upon the robust foundation of OpenGym, GymX is engineered to be the ultimate, all-in-one health companion. It eliminates the need for multiple apps by deeply integrating workout tracking, an embedded music player, and AI-powered nutrition and lifestyle management into a single offline-first interface.
+GymX is an independent, open-source mobile fitness and nutrition platform. Built upon the robust foundation of OpenGym, GymX is engineered to be the ultimate, all-in-one health companion. It eliminates the need for multiple apps by deeply integrating workout tracking, an embedded music player, AI-powered nutrition, and cloud-synchronized lifestyle management into a single cohesive interface.
 
 ## The Vision
 
-Most individuals constantly switch between a fitness tracker for lifting, a nutrition app for food logging, and a media app for music. GymX unifies this entire ecosystem. Your workout data, your diet and macro tracking, your lifestyle metrics, and your audio are entirely controlled within one cohesive application.
+Most individuals constantly switch between a fitness tracker for lifting, a nutrition app for food logging, and a media app for music. GymX unifies this entire ecosystem. Your workout data, diet tracking, lifestyle metrics, and audio are entirely controlled within one application, with the added security of cloud backups to keep your progress safe across devices.
 
 ## Comprehensive Feature Set
 
@@ -26,9 +26,11 @@ Most individuals constantly switch between a fitness tracker for lifting, a nutr
 * **In-App Media Player:** A functional music player embedded within the workout screen, featuring media controls without needing to minimize the app.
 * **Smart Routine Automation:** Bind specific local or licensed playlists to specific workout routines (e.g., triggering a high-energy playlist automatically on deadlift days).
 
-### 5. Privacy & Local-First Architecture
-* **Total Data Ownership:** GymX operates fully offline. There are no mandatory cloud servers.
-* **Local Storage:** All workout history, AI nutrition logs, and media file paths are stored exclusively on the user's local device.
+### 5. Account Management & Cloud Synchronization
+* **Secure Authentication:** Users can create personalized accounts and log in using standard credentials to secure their profiles.
+* **Cloud Data Backup:** All tracked data—including workouts, nutrition logs, sleep metrics, and hydration history—is automatically synced and saved to the cloud.
+* **Cross-Device Access:** Seamlessly access your fitness and nutrition ecosystem from any authenticated device without losing progress.
+* **Offline-Capable Engine:** Core logging features remain functional without an internet connection, caching data locally and syncing automatically once a connection is restored.
 
 ## Current Development Phase
 
@@ -36,9 +38,9 @@ Most individuals constantly switch between a fitness tracker for lifting, a nutr
 
 We are currently reverse-engineering the OpenGym repository and preparing the foundation for the GymX feature set. Active development tasks include:
 * Systematically mapping the OpenGym codebase to understand existing UI component hierarchies and state management flows.
-* Stripping out legacy external server logic to prepare the application for a strictly local-first storage model.
-* Researching lightweight, on-device AI models for local food scanning and macro calculation without relying on external cloud APIs.
-* Designing the schema for the new local database to support the expanded nutrition, sleep, and hydration metrics.
+* Integrating a secure authentication and cloud database solution (e.g., Firebase or Supabase) to handle user accounts and data synchronization.
+* Researching lightweight, on-device AI models for food scanning and macro calculation.
+* Designing the schema for the new database to support the expanded nutrition, sleep, and hydration metrics.
 
 ## Acknowledgments & Credits
 
@@ -47,8 +49,8 @@ This project was heavily inspired by and built upon the open-source foundation o
 ## Tech Stack
 
 * **Platform:** Mobile (Framework inherited from OpenGym codebase)
-* **Storage:** Local Device Storage 
-* **AI Engine:** On-device machine learning for food recognition (Implementation pending)
+* **Backend & Database:** Cloud Synchronization & Auth (e.g., Firebase/Supabase/Custom Backend)
+* **AI Engine:** Machine learning integrations for food recognition (Implementation pending)
 * **Workflow:** Git / GitHub
 
 ## License
